@@ -1,0 +1,141 @@
+#carteira-modal{
+  min-width: 625px;
+  #saldo-atual{
+    margin-bottom: 10px;
+    display: inline-block;
+    > h2{
+      font-size: 1.7rem;
+      border-bottom: 2px solid transparent;
+      > span{
+        &.selecionado{
+          border-bottom: 2px solid $bg-selecionado;
+        }
+      }
+    }
+  }
+
+  #filtros{
+    margin-bottom: 15px;
+    #filtros-titulo{
+      h3{
+        @include centralizarY;
+        i{
+          margin-right: 10px;
+          @include centralizar;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          color: #999;
+          border: 1px solid #999;
+        }
+      }
+    }
+    > #filtros-opcoes{
+      @include centralizar;
+      > input{
+        margin-right: 5px;
+      }
+      > label{
+        user-select: none;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #produtos{
+    @include centralizarX;
+    flex-wrap: wrap;
+    .produto{
+      height: fit-content;
+      height: -moz-fit-content;
+      background-color: $bg-white;
+      margin: 0 1% 1% 0;
+      min-width: 230px;
+      width: 19%;
+      min-height: 308px;
+      max-height: fit-content;
+      max-height: -moz-fit-content;
+      @include boxShadow;
+      position: relative;
+      > hr{
+        @include hrModal;
+      }
+      .produto-titulo{
+        padding: 15px;
+        @include centralizar;
+        > h2{
+          color: #000;
+          font-size: 1.2rem;
+        }
+      }
+      .produto-corpo{
+        @include centralizar;
+        flex-wrap: wrap;
+        color: #000;
+        margin: 15px 0;
+        > .produto-corpo-estoque{
+          width: 100%;
+          margin: 0 0 10px 15px;
+          > span{
+            color: #000
+          }
+        }
+        > .produto-corpo-img{
+          > img{
+            height: 80px; // Tirar depois (se possivel 04/03)
+            max-width: 160px; // Tirar depois (se possivel 04/03)
+          }
+        }
+        > .produto-corpo-preco{
+          width: 100%;
+          @include centralizarX;
+          > span{
+            padding: 5px;
+            color: $navbar-color;
+            font-size: 1.4rem;
+          }
+        }
+      }
+      .produto-botao{
+        @include centralizar;
+        padding: 15px 0;
+        transition-duration: .5s;
+        cursor:pointer;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        > i{
+          font-size: 1.5rem;
+        }
+        > p{
+          transition-duration: .5s;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  &.modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+    box-shadow: unset;
+  }
+  #sem-produtos{
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    @include centralizar;
+    width: 300px;
+    flex-wrap: wrap;
+    i {
+      font-size: 2.4rem
+    }
+    h2{
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

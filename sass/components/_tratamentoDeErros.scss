@@ -1,0 +1,32 @@
+#tratamento-de-erros{
+  width: 300px;
+  margin: 15px;
+  padding: 10px;
+  @include centralizar;
+  flex-wrap: wrap;
+  text-align: center;
+  > i{
+    width: 100%;
+    font-size: 2rem;
+    color: $bg-yellow
+  }
+  > h2{
+    color: $bg-dark
+  }
+}
+
+.tratamento-de-erros{
+  margin: 15px;
+  padding: 10px;
+  @include centralizar;
+  flex-wrap: wrap;
+  text-align: center;
+  > i{
+    width: 100%;
+    font-size: 2rem;
+    color: #666
+  }
+  > h2{
+    color: $bg-dark
+  }
+}

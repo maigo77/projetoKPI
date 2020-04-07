@@ -1,0 +1,19 @@
+#tela-deslogado{
+  width: 100vw;
+  height: 100vh;
+  @include centralizar;
+  .tela-deslogado-info{
+    @include centralizar;
+    background-color: $bg-alert;
+    flex-wrap: wrap;
+    padding: 15px;
+    i{
+      font-size: 3rem
+    }
+    h1{
+      margin-top: 15px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

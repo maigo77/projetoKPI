@@ -1,0 +1,48 @@
+$color: #FFF;
+$font: sans-serif;
+// BG Padrao
+$bg-white: #FFF;
+$bg-light: #EEE;
+$bg-darker: #707372;
+$bg-navbar: linear-gradient(to bottom, $bg-light, #D9D9D9);
+// BG Opt 
+$bg-dark: #27251F; 
+$bg-opt1: #002855;
+$bg-opt2: #615E9B;
+$bg-opt3: #981F40;
+$bg-opt4: #652f6C;
+// BG Outros 
+$bg-alert: #E22427;
+$bg-selecionado: #428C47;
+$bg-titulo: #D9D9D9;
+$bg-disponivel: #93BD94;
+
+$bg-blue: #3E606F;
+$bg-green: #3DBC69;
+$bg-yellow: #FFC72C;
+$bg-red: #E22427;
+$bg-gray: #403B36;
+$bg-purple: #B459FF;
+
+$bg-light-alert: lighten($bg-alert, 40%);
+$bg-light-gray: lighten(#666, 50%);
+$bg-light-yellow: lighten($bg-yellow, 30%);
+$bg-light-green: lighten($bg-green, 35%);
+
+// Icones 
+$icon-dollar: #428C47;
+$icon-beach: #D96C80;
+$icon-trophy: #0367A6;
+$icon-achievements: #FFA40D;
+$icon-diamond: #1DB7CC;
+// Bg Icones 
+$bg-achievements: #4298B5;
+// Navbar Superior 
+$navbar-height: 0;
+$margin-top: 1.5%;
+$navbar-color: #736B66;
+// Larguras
+$navbar-width: 5vw;
+$margin: 1.75vw;
+$sidebar-width: 15vw;
+$section-width: 76vw;

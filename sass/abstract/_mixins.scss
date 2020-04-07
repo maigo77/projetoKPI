@@ -1,0 +1,51 @@
+@mixin centralizar{
+  display:flex;
+  justify-content: center;
+  align-items: center
+}
+
+@mixin centralizarX{
+  display: flex;
+  justify-content: center;
+}
+
+@mixin centralizarY{
+  display: flex;
+  align-items: center;
+}
+
+@mixin boxShadow{
+  box-shadow: 5px 5px 12px -2px rgba(0,0,0,0.48);
+}
+
+@mixin hoverPadrao{
+  background: rgba(255, 255, 255, 0.2)
+}
+
+@mixin hrModal{
+  border: none;
+  background-color: #CCC;
+  height: 1px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@mixin table($paddingVert, $paddingHori){
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    tr{
+      border-bottom: 1px solid #CCC;
+    }
+    th{
+      font-weight: 1000;
+    }
+    td, th{
+      color: #000;
+      padding: $paddingVert $paddingHori;
+    }
+    .td-destaque{
+      color: blue;
+    }
+  }
+}

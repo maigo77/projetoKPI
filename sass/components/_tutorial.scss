@@ -1,0 +1,73 @@
+#tutorial-blocker{
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  @include centralizar;
+  .todos-tutoriais{
+    background-color: #FFF;
+    padding: 15px;
+    border-radius: 10px;
+    transition-duration: 5s;
+    position: absolute;
+    .tutorial-container{
+      border-bottom: 1px solid $navbar-color;
+      .tutorial-titulo{
+        h2{
+          color: #222;
+          @include centralizar;
+          i {
+            color: #222;
+            margin-right: 10px 
+          }
+        }
+        hr{
+          height: 1px;
+          border: unset;
+          background-color: $navbar-color
+        }
+      }
+      .tutorial-conteudo{
+        margin-top: 15px;
+        ul{
+          list-style-type: none;
+          li{
+            color: #222;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    .tutorial-controles{
+      margin-top: 15px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      & .setas{
+        @include centralizar;
+        i{
+          cursor: pointer;
+          font-size: 2rem;
+          color: #222;
+        }
+      }
+      .pular-tutorial{
+        background: #222;
+        border: 1px solid transparent;
+        padding: 15px 10px;
+        @include centralizar;
+        cursor: pointer;
+        &:hover{
+          background: transparent;
+          border: 1px solid #222;
+          transition-duration: .5s;
+          > span{
+            color: #222;
+          }
+        }
+      }
+    }
+  }
+}

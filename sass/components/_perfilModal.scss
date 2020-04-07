@@ -1,0 +1,63 @@
+/* Perfil Modal */
+#perfil-modal{
+  #gerador-avatar{
+    .gerador-opcoes{
+      .opcoes{
+        padding-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        h2{
+          width: 100%;
+          cursor: pointer;
+          border-bottom: 1px solid #222;
+          color: #222;
+          user-select: none;
+          i{
+            transition-duration: .5s;
+            color: #222;
+            &.setaGira{
+              transform: rotate(90deg)
+            }
+          }
+        }
+        li, h2{
+          color: black;
+        }
+        li{
+          margin-bottom: 5px; cursor: pointer;
+          &:hover{
+            text-decoration: underline
+          }
+        }
+        .lista-de-opcoes{
+          max-height: 300px;
+          overflow-y: auto;
+          height: 0;
+          transition-duration: .5s;
+          width: 100%;
+          margin: 15px;
+          scrollbar-color: $navbar-color rgba(255, 255, 255, 0.8);
+          scrollbar-width: thin;
+          &::-webkit-scrollbar-track{
+            background-color: rgba(255, 255, 255, 0.8);
+          }
+      
+         &::-webkit-scrollbar{
+            width: 10px; 
+          }
+      
+          &::-webkit-scrollbar-thumb{
+            background-color: $navbar-color;
+          }
+        }
+        .aberto{
+          height: unset;
+        }
+      }
+    }
+  }
+  &.modal{
+    background: white;
+    box-shadow: unset
+  }
+}

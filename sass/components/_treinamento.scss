@@ -1,0 +1,605 @@
+
+.teste{
+  @include boxShadow;
+  width: 49%;
+  height: 100%;
+  background-color: white;
+  color: black;
+  overflow: hidden;
+}
+
+.teste1{
+  @include boxShadow;
+  margin-left: 1%;
+  width: 50%;
+  background-color: white;
+  color: black;
+  height: 100%;
+  overflow: hidden;
+}
+
+section{
+  height: fit-content;
+  height: -moz-fit-content;
+}
+
+#cards{
+  width: 100%;
+  height: 30%;
+  margin-bottom: 1.5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .cards{
+    @include boxShadow;
+    @include centralizarY;
+    cursor: pointer;
+    background-color: white;
+    flex-direction: column;
+    width: 31.5%;
+    padding: 5px;
+    height: 100%;
+    position: relative;
+    margin-top: 1.5%;
+    .link-adicionar{
+      @include centralizar;
+      width: 100%;
+      .adicionar{
+        text-align: center;
+        i{
+          color: $bg-green;
+        }
+      }
+    }
+    p, h2 {
+      margin-top: 5px;
+      color: $navbar-color;
+      font-size: 1.4rem;
+    }
+    p{
+      padding: 5px 5px;
+    }
+    i{
+      transition-duration: .5s;
+      margin-top: 10px;
+      font-size: 3rem;
+    }
+    a:visited{
+      color: blue;
+    }
+    &:hover{
+      i{
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+
+        transform: scale(1.2)
+      }
+    }
+    &.agenda-treina{
+      i{
+        color: green;
+      }
+    }
+    &.prova{
+      i{
+        color: blue;
+      }
+    }
+    &.conteudo{
+      i{
+        color: $bg-purple;
+      }
+    }
+    &.gerencia-evolucao{
+      i{
+        color: $icon-achievements;
+      }
+    }
+    &.realiza-prova{
+      i{
+        color: $icon-beach;
+      }
+    }
+  };
+}
+
+.panel{
+  margin: 0px;
+  margin-top: 5px;
+  // border: 1px solid black;
+  height: 98%;
+}
+
+.panel-header{
+  p{
+    color: $navbar-color;
+    padding: 5px 10px;
+    font-size: x-large;
+    font-weight: bold;
+    border-bottom: 1px solid $navbar-color;
+    text-align: center;
+  }
+
+  i{
+    float: right;
+  }
+
+}
+
+.filter {
+  padding-bottom: 15px;
+  display: flex;
+  p{
+    color: black;
+  }
+}
+
+#filter {
+  justify-content: center;
+  height: 56px;
+  align-items: flex-end;
+  display: flex;
+
+  .filter-status{
+    color: black;
+    display: flex;
+    .filter-text-status{
+      padding-right: 10px;
+      padding-left: 10px;
+      p{
+        margin-top: 5%;
+        color: black;
+        font-weight: bold;
+      }
+    }
+    .filter-option-status{
+      display: flex;
+      label{
+        color: black;
+        padding-right: 10px;
+        padding-left: 5px;
+      }
+      input{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        height: 17px;
+        width: 17px;
+      }
+    }
+    #status_a{
+      padding-right: 10px;
+    }
+  }
+
+  .filter-kpi{
+    display: contents;
+    p{
+      color: black;
+      font-weight: bold;
+    }
+    strong{
+      margin-left: 20px;
+      color: black;
+    }
+  }
+
+  .filter-busca{
+    i{
+      color: black;
+    }
+    input{
+      height: 25px;
+      padding-left: 5px;
+      border-color: #ccc;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      color: black;
+      margin-bottom: 1px;
+      &:focus{
+        border-color: green;
+        box-shadow: 0 0 0.2em green;
+        outline: 0;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+}
+
+.panel-body{
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-left: 20px;
+  height: 78%;
+  width: 96%;
+  color: black;
+  .tabela{
+    height: 379px;
+    @include table(5px,0);
+    thead{
+      .center{
+        text-align: center;
+      }
+    }
+    tbody{
+      .center{
+        text-align: center;
+      }
+      .acao{
+        cursor: pointer;
+      }
+
+      i{
+        opacity: 0.5;
+        &:hover{
+          opacity: 1;
+        }
+        &.i-apoio{
+          color: $bg-red;
+        }
+        &.i-ger{
+          color: $bg-green;
+        }
+        &.i-edit{
+          color: $bg-purple;
+        }
+        &.i-config{
+          color: $icon-dollar;
+        }
+      }
+    }
+  }
+}
+
+
+.lista-videos-novo > *{
+  display: flex;
+  background-color: gray;
+  width: 95%;
+  height: 100%;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.thumbnail{
+  display: flex;
+  width: 20%;
+  height: 50px;
+  margin-right: 2px;
+  border-radius: 15px;
+  > img {
+    width: 100%;
+  }
+}
+
+.info-video{
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  width: 80%;
+  border-radius: 15px;
+}
+
+.cadVideo-novo{
+  color: black;
+}
+
+.bloco-meio{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  height: 344px;
+  // color: black;
+  margin-bottom: 1.5%;
+}
+
+.cadastro-treinamento{
+  @include boxShadow;
+  width: 95%;
+  height: 100%;
+  background-color: white;
+  // color: black;
+  overflow: hidden;
+}
+
+#bloco-superior-treina{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+
+.teste5{
+  // height: 60vh;
+  width: 100%;
+  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  background-color: #fff;
+  min-height: 260px;
+  z-index: 99999999;
+}
+  
+#modal-add-treina{
+  #add-treina{
+    background-color: white;
+    width: 1150px;
+    height: 500px;
+  }
+  .dados-filter{
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: $icon-trophy;
+    width: 20%;
+    > p {
+      color: white !important;
+      font-weight: bold;
+      padding-left: 10px;
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+  .incluir-dados{
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: $icon-dollar;
+    width: 20%;
+    float: right;
+    > p {
+      color: white !important;
+      font-weight: bold;
+      padding-left: 10px;
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+  .dados{
+    padding-top: 10px;
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      tr{
+        border-bottom: 1px solid #CCC;
+      }
+      th{
+        font-weight: 1000;
+        // font-size:1rem;
+      }
+      td, th{
+        color: #000;
+        padding: 15px 0;
+      }
+      .td-destaque{
+        color: blue;
+      }
+    }
+  }
+  &.modal{
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+  }
+}
+
+#modal-ger-conteudo{
+  #add-conteudo{
+    background-color: white;
+    width: 1150px;
+    height: 600px;
+  }
+  .dados-filter{
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: $icon-trophy;
+    width: 20%;
+    > p {
+      color: white !important;
+      font-weight: bold;
+      padding-left: 10px;
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+  .incluir-dados{
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: $icon-dollar;
+    width: 20%;
+    margin-left: 60%;
+    float: right;
+    > p {
+      color: white !important;
+      font-weight: bold;
+      padding-left: 10px;
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+  .dados{
+    padding-top: 10px;
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      tr{
+        border-bottom: 1px solid #CCC;
+      }
+      th{
+        font-weight: 1000;
+      }
+      td, th{
+        color: #000;
+        padding: 15px 0;
+      }
+      .td-destaque{
+        color: blue;
+      }
+    }
+  }
+  &.modal{
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+  }
+}
+
+.total {
+  margin-right: 2%;
+}
+
+#totalCount {
+  color: #000;
+}
+
+.search{
+  align-items: center;
+  width: 84%;
+  margin-bottom: 1%;
+  position: relative;
+  input{
+    margin-left: 10%;
+    color: black;
+    width: 90%;
+    height: 4%;
+    padding: 3px;
+  }
+  .icon{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    i{
+      cursor: pointer;
+      color: #6B8DF2;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.filtro{
+  @include boxShadow;
+  position: absolute;
+  margin-left: 8%;
+  width: 70%;
+  padding-right: 5%;
+  background-color: white;
+  z-index: 999;
+  align-items: center;
+  table{
+    width: 100%;
+    margin-top: 3%;
+  }
+  th{
+    color: black;
+    padding: 0;
+    text-align: center;
+  }
+  .btn-filtrar{
+    margin-top: 10%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    a{
+      margin-right: 40%;
+      margin-left: 50%;
+      position: relative;
+      top: -5px;
+      background: #6B8DF2;
+    }
+    i{
+      color: red;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  .mensagemErro{
+    margin-top: 10%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    p{
+      color: #6B8DF2;
+    }
+  }
+}
+
+.div-add-treinamento{
+  position: absolute;
+  height: 845px;
+  left: -1000%;
+  top: 2%;
+  transition-duration: .5s;
+  z-index: 1;
+  border-radius: 15px;
+  width: 78%;
+  background-color: #2a3748;
+}
+
+.vSelect{
+  input{
+    color: black;
+  }
+}
+
+.footer{
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  border-radius: 50px;
+  padding-bottom: 30px;
+  right: 45px;
+  i{
+    color: #6B8DF2;
+    font-size: 2rem;
+    cursor: pointer;
+    @include boxShadow;
+    border-radius: 25px;
+  }
+}
+
+#date-picker {
+  cursor: pointer;
+  position: relative;
+  ul {
+    list-style: none;
+    li{
+      display: inline-block;
+      .date-picker {
+        input{
+          color: black;
+          padding: 2px;
+        }
+        div span {
+          color: black;
+        }
+      }
+      i{
+        color: black;
+        position: absolute;
+        top: 3.5px;
+        left: 150px;
+        &.fa-calendar-alt {
+          cursor: default ;
+        }
+      }
+    }
+  }
+  .div-add-treinamento{
+    position: absolute;
+    left: -1000%;
+    top: -52px;
+    transition-duration: .5s;
+    z-index: 1;
+    border-radius: 15px;
+    width: 101%;
+    background-color: #656567;
+  }
+  
+}

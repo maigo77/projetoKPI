@@ -1,0 +1,11 @@
+#moodle{
+  &.centralizar{
+    @include centralizar;
+    > iframe{
+      display: none
+    }
+  }
+  iframe{
+    width: 100%;
+  }
+}

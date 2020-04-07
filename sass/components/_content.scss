@@ -1,0 +1,8 @@
+#app{
+  @include centralizar;
+  flex-wrap: wrap;
+  width: 100%;
+  > section{
+    margin-left: ($navbar-width + $margin);
+  }
+}

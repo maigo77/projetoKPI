@@ -1,0 +1,136 @@
+#folga-modal{
+  > table{
+    @include table(15px, 0)
+  }
+  &.modal{
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+    box-shadow: unset;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .hoje{
+    > div{
+      background: #CCC;
+      border: 2px solid #88898C;
+    }
+  }
+
+  .indisp {
+    position: relative;
+    cursor: unset!important;
+    border:2px solid #FFF;
+    &:before {
+      display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 0;
+        right: 0;
+        content: "";
+        border-top: 5px solid #CD2C24;
+        border-right: 5px solid #CD2C24;
+        border-left: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+    }
+    > div{
+      background-color: rgba(255, 255, 255, 0.95)
+    }
+  }
+  
+  .disp {
+    position: relative;
+    background-color: $bg-disponivel;
+    &:before {
+      display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 0;
+        right: 0;
+        content: "";
+        border-top: 5px solid $icon-dollar;
+        border-right: 5px solid $icon-dollar;
+        border-left: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+    }
+    > div{
+      background-color: $bg-disponivel;
+    }
+  }
+
+  .folga-marcada{
+    > div{
+      background: #FFD284;
+      border: 2px solid #FFB32F!important;
+    }
+  }
+  
+  .folga-confirmada{
+    > div {
+      background: #93BD94;
+      border: 2px solid #448844!important;
+    }
+  }
+  
+  .folga-recusada{
+    > div {
+      background: #F2836B;
+      border: 2px solid #CD2C24!important;
+    }
+  }
+
+  .selected-date{
+    background-color: #B4DCED
+  }
+  
+  #legenda-calendario{
+    ul{
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      > li {
+        display: flex;
+        align-items: center
+      }
+    }
+    .quadrado{
+      width: 30px;
+      height: 30px;
+      margin:0 10px 0 20px;
+      > div{
+        padding: 14px
+      }
+    }
+  }
+  
+  #confirma-folga{
+    margin-top: 10px;
+    > h2{
+      background-color: #222;
+      padding: 10px;
+    }
+    > div{
+      > p{
+        padding: 15px;
+        color: #000;
+        > span{
+          font-weight: bold;
+          font-size:1.2rem;
+          color: #000
+        }
+      }
+      > div{
+        display: flex;
+        justify-content: space-around;
+        > div{
+          cursor: pointer;
+          > p{
+            font-size: 1.3rem;
+            padding: 15px 10px;
+          }
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

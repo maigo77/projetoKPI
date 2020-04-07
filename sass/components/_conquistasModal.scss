@@ -1,0 +1,38 @@
+#conquistas-modal{
+  .todas-conquistas{
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    .conquista{
+      @include centralizar;
+      flex-wrap: wrap;
+      border-radius: 10px;
+      padding: 15px;
+      width: 200px;
+      height: 200px;
+      margin: 15px;
+      i{
+        font-size: 3.5rem;
+        padding: 15px;
+      }
+      i, h2{
+        text-align: center;
+      }
+      &.bloqueado{
+        background: linear-gradient(to bottom, #262626, #0D0D0D);
+        i, h2{
+          color: #252526
+        }
+      }
+      &.adquirido{
+        background: linear-gradient(to bottom, #FFEB00, #FFC000);
+      }
+    }
+  }
+  &.modal{
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+    box-shadow: unset;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

@@ -1,0 +1,253 @@
+*{
+  margin:0;
+  padding:0;
+  color: $color;
+  font-family: $font;
+  text-decoration: none;
+}
+
+#gif-tela-inicial{
+  width: 100vw;
+  height: 100vh;
+  @include centralizar;
+  #gif{
+    width: fit-content
+  }
+}
+
+.transition{
+  transition-duration: .5s;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.blocker{
+  z-index: 3;
+  scrollbar-color: $navbar-color rgba(0, 0, 0, 0.8);
+  scrollbar-width: thin;
+  &::-webkit-scrollbar-track{
+    background-color: $navbar-color;
+  }
+
+  &::-webkit-scrollbar{
+    width: 10px; 
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.8)
+  }
+}
+
+#container {
+  display:flex;
+  width: 100%;
+  height: 100%
+}
+
+p, h1, h2, h3, h4, h5, a, li {
+  color: $color
+}
+
+.bg-dark{
+  background-color: $bg-dark!important
+}
+
+.bg-darker{
+  background-color: $bg-darker!important
+}
+
+.bg-light{
+  background-color: $bg-light!important
+}
+
+.bg-opt1{
+  background-color: $bg-opt1!important
+}
+
+.bg-opt2{
+  background-color: $bg-opt2!important
+}
+
+.bg-opt3{
+  background-color: $bg-opt3!important
+}
+
+.bg-opt4{
+  background-color: $bg-opt4!important
+}
+
+.bg-white{
+  background-color: $bg-white;
+}
+
+.icon-dollar{
+  color: $icon-dollar;
+}
+
+.icon-folga{
+  color: $icon-beach;
+}
+
+.icon-conquistas{
+  color: $icon-trophy;
+}
+
+.bg-transparent{
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.bg-gradient{
+  background: $bg-navbar;
+}
+
+.bg-btn-green{
+  background-color: $icon-dollar
+}
+
+.bg-btn-red{
+  background-color: $bg-alert
+}
+
+.bg-btn-yellow{
+  background-color: $bg-yellow
+}
+
+.bg-btn-gray{
+  background-color: $navbar-color
+}
+
+.color-red{
+  color: $bg-red!important
+}
+
+.color-yellow{
+  color: $bg-yellow!important
+}
+
+.color-pink{
+  color: $icon-beach!important
+}
+
+.color-lightblue{
+  color: $icon-diamond!important
+}
+
+.color-blue{
+  color: $icon-trophy!important
+}
+
+.color-orange{
+  color: $icon-achievements!important
+}
+
+.color-green{
+  color: $bg-green!important
+}
+
+.text-center{
+  text-align: center
+}
+
+.dNone{
+  display: none!important
+}
+
+/* Definicoes para evitar o delay ao aumentar o tamanho da fonte */
+section{
+  h1{
+    transition-duration: unset;
+  }
+}
+
+.navbar-selecionado{
+  border-left: 5px solid #FFF!important
+}
+
+#_progress {
+  --scroll: 0%;
+  background: linear-gradient(to right,$bg-dark var(--scroll),transparent 0);
+  position: fixed;
+  width: 100%;
+  height: 5px;
+  top:0px;
+  z-index: 100;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.semClick{
+  cursor: unset!important;
+}
+
+.selecionado{
+  border-bottom: 2px solid $bg-selecionado;
+}
+
+// ::-webkit-scrollbar-track
+// {
+// 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+// 	border-radius: 10px;
+// 	background-color: #F5F5F5;
+// }
+
+// ::-webkit-scrollbar
+// {
+// 	width: 10px;
+// 	background-color: #F5F5F5;
+// }
+
+// ::-webkit-scrollbar-thumb
+// {
+// 	border-radius: 10px;
+// 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+// 	background-color: $bg-dark;
+// }
+
+.gif-container{
+  @include centralizar;
+  flex-wrap: wrap;
+  padding: 15px;
+  p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+.gif{
+  @include centralizar;
+  border-radius: 50%;
+  border:3px dashed #FFF;
+  height: 90px;
+  width: 90px;
+  i{
+    font-size: 3rem;
+  }
+  -webkit-animation: giraGif 2s infinite;
+  -o-animation: giraGif 2s infinite;
+  -moz-animation: giraGif 2s infinite;
+  animation: giraGif 2s infinite
+}
+
+@keyframes giraGif{
+  from{
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0)
+  }
+  to{
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}

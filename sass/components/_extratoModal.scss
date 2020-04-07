@@ -1,0 +1,86 @@
+#extrato-modal{
+  #extrato-sem-registros{
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    @include centralizar;
+    flex-wrap: wrap;
+    i {
+      font-size: 2.4rem
+    }
+    h2{
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  @include table(15px, 10px);
+  color: #FFF;
+  &.modal{
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+  }
+  #container-extrato{
+    height: fit-content;
+    height: -moz-fit-content;
+    max-height: 450px;
+    overflow-y: auto;
+    position: relative;
+    scrollbar-color: $navbar-color rgba(255, 255, 255, 0.8);
+    scrollbar-width: thin;
+   &::-webkit-scrollbar-track{
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+   &::-webkit-scrollbar{
+      width: 10px; 
+    }
+
+    &::-webkit-scrollbar-thumb{
+      background-color: $navbar-color;
+    }
+  }
+  table td, table th{
+    color: #FFF;
+  }
+  table{
+    overflow: hidden;
+    thead{
+      text-align: center;
+    }
+    > tbody{
+      > tr{
+        > td{
+          max-width: 175px;
+          > i{
+            font-size: inherit;
+          }
+        }
+      }
+    }
+  }
+  #extrato-rodape{
+    display: flex;
+    justify-content: space-between;
+    h2{
+      margin-top: 15px;
+    }
+    // > div{
+    //   display: flex;
+    //   align-items: center;
+    //   p {
+    //     margin-right: 10px;
+    //   }
+    //   select{
+    //     color: #000
+    //   }
+    //   option{
+    //     color: #000
+    //   }
+    // }
+  }
+  &.modal{
+    box-shadow: unset;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

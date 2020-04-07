@@ -1,0 +1,228 @@
+  /* Perfil */
+  #perfil{
+    @include boxShadow;
+    position: relative;
+    width:25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 1.5% 1.5% 0;
+    height: 100%;
+    /* Div Superior */
+    #perfil-ranking{
+      display: flex;
+      justify-content: space-between;
+      /* BTN Visivel ou nao */
+      #aparecer-ranking{
+        position: absolute;
+        left: 15px;
+        top: 10px;
+        z-index: 5;
+        > i{
+          transition-duration: .5s;
+          opacity: 0.5;
+          cursor: pointer;
+          font-size: 1.5rem;
+          color: #000;
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+      /* Ranking */
+      #ranking{
+        // cursor: pointer;
+        position: absolute;
+        user-select: none;
+        right: 15px;
+        top: 10px;
+        @include centralizar;
+        z-index: 5;
+        > i, > p{
+          color: #000
+        }
+        > p{
+          font-size: 2rem
+        }
+        > .comparativo{
+          &.negativo{
+            color: red;
+            align-self: flex-start;
+          }
+          &.positivo{
+            color: green;
+          }
+          &.mesmo{
+            color: $bg-yellow;
+            margin-left: 5px;
+          }
+          &.ntem{
+            @include centralizar;
+            margin-left: 5px;
+            &::before{
+              content: '---';
+              color: $bg-gray;
+            }
+          }
+          font-size: 1.5rem;
+        }
+      }
+    }
+    #perfil-aux{
+      margin:0 auto
+    }
+    /* IMG Perfil */
+    #perfil-foto{
+      @include centralizar;
+      flex-direction: column;
+      position: relative;
+      margin: 0 auto;
+      .circulo-performance{
+        @include centralizar;
+        font-weight: 700;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        position: absolute;
+        right: 15px;
+        bottom: -15px;
+      }
+      .gauge{
+        position: relative;
+        width: 75%;
+        margin-top: 30px;
+        div {
+          @include centralizar;
+          position: relative;
+          cursor: pointer;
+          i{
+            font-size: 5rem;
+            margin: 30px;
+          }
+          #perfil-edita-avatar{
+            position: absolute;
+            margin: 50px auto;
+            color: $bg-dark;
+            align-self: flex-start;
+          }
+        }
+        .avatar{
+          transition-duration: .3s;
+          svg{
+            max-width: 85%;
+          }
+        }
+      }
+    }
+    
+    /* Informacoes do usuario */
+    #perfil-informacoes-funcionario{
+      margin: 0 auto;
+      @include centralizar;
+      flex-wrap: wrap;
+      h2{
+        margin: 10px 5px 0 5px;
+        color: orange;
+        text-align: center;
+        width: 100%;
+      }
+      h3{
+        width: 100%;
+        text-align: center;
+        color: #CCC;
+        padding-bottom: 15px;
+        font-size: 1rem;
+        margin: 0 5px;
+      }
+    }
+    
+    /* Logo */
+    #perfil-logo{
+      @include centralizar;
+      padding: 10px;
+      margin: 0 15px 15px 15px;
+      img{
+        width: 70%;
+      }
+    }
+    
+    #perfil-saldo{
+      margin: 0 auto 15px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      padding: 10px; 
+      i{
+        margin-right: 15px;
+        color: $bg-yellow;
+      }
+      p {
+        color: #000;
+      }
+    }
+    #perfil-cards{
+      align-self: flex-end;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      .perfil-cards{
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        &.shopping{
+          border: 1px solid #3FA663;
+          border-left: unset;
+          background-color: #3FA663;
+        }
+        &.conquistas{
+          border: 1px solid $bg-achievements;
+          border-left: unset;
+          background-color: $bg-achievements;
+        }
+        .perfil-cards-icone{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 25%;
+          margin-right: 10px;
+          background-color: #FFF;
+          i{
+            font-size: 2.7rem;
+          }
+          &.shopping{
+            border: 1px solid #3FA663;
+          }
+          &.conquistas{
+            border: 1px solid $bg-achievements;
+          }
+        }
+        .perfil-cards-texto{
+          h2{
+            font-size: 1.2rem;
+          }
+        }
+        #extrato{
+          font-size: 1rem;
+          position: absolute;
+          right: 5px;
+          bottom: 5px;
+          &:hover{
+            text-decoration: underline
+          }
+        }
+      }
+    }
+  }
+
+  .nao-visivel{
+    font-weight: 600;
+    color: $navbar-color;
+    font-size: 2rem;
+  }

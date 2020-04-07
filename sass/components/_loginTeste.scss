@@ -1,0 +1,51 @@
+#login-teste{
+  display: flex;
+  position: fixed;
+  bottom: 90px;
+  right: 15px;
+  #form-login-teste{
+    @include boxShadow;
+    border-radius: 10px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    bottom: 120px;
+    right: 85px;
+    h3{
+      text-align: center;
+      padding: 5px 10px;
+    }
+    hr{
+      border: unset;
+      height: 2px;
+      width: 100%;
+      background-color: #CCC
+    }
+    input{
+      margin: 0 5px;
+      height: 25px;
+      border: unset;
+      border-bottom: 2px solid $icon-dollar;
+      padding: 5px 10px 0 10px;;
+      background-color: transparent;
+      &:focus{
+        outline: none;
+      }
+      &::placeholder{
+        color: rgba(255, 255, 255, 0.7)
+      }
+    }
+  }
+  #btn-login-teste{
+    @include centralizar;
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    background-color: #000;
+    border-radius: 50%;
+    i{
+      font-size: 2rem;
+    }
+  }
+}

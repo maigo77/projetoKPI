@@ -1,0 +1,11 @@
+#modal-desempenho{
+  > h1{
+    color:#FFF;
+  }
+  &.modal{
+    max-width: fit-content;
+    max-width: -moz-fit-content;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: unset
+  }
+}

@@ -1,0 +1,76 @@
+#config-modal{
+  hr{
+    height: 1px;
+    border: none;
+    width: 100%;
+    background-color: #CCC;
+    margin-bottom: 10px;
+  }
+  ul{
+    list-style-type: none;
+    margin: 0 auto;
+    @include centralizar;
+  }
+  #config-cores{
+    > div{
+      > ul {
+        > li {
+          > div{
+            margin: 10px;
+            cursor: pointer;
+            &.circulo-opcao{
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+            }
+            &.selecionado{
+              width: 48px;
+              height: 48px;
+              border: 2px solid $bg-selecionado;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+  #config-fonte{
+    > div{
+      > ul{
+        margin: 10px auto;
+        > li{
+          font-size: 1.4rem;
+          cursor: pointer;
+          user-select: none;
+          border-bottom: 2px solid transparent;
+          &:nth-child(2){
+            cursor: unset;
+            &:hover{
+              border-bottom: 2px solid transparent;
+            }
+            margin: 0 15px;
+          }
+          &:hover{
+            border-bottom: 2px solid $bg-selecionado
+          }
+        }
+      }
+      > div{
+        margin:0 auto 10px auto;
+        width: 30%;
+        &.config-fonte-exemplo{
+          padding: 20px;
+          @include centralizar;
+          > p{
+            color: #000;
+            user-select: none;
+          }
+        }
+      }
+    }
+  }
+  &.modal{
+    box-shadow: unset;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

@@ -1,0 +1,15 @@
+.inicio{
+  display: flex;
+  padding: $margin-top $margin-top $margin-top 0;
+  height: 93vh;
+  width: 100%;
+}
+
+#bloco-central-lateral{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
